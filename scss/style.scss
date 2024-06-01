@@ -1,3 +1,797 @@
-h1 {
-    color: green;
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+$c-font: #000000;
+$c-white: #FFFFFF;
+$c-hero-header: #F0F0F0; 
+$c-red-primary: #CD104D;
+$c-blue-primary: #535C91;
+$c-dark-blue: #1B1A55;
+$c-card: #E7E7E7;
+$c-card-hover: #CEA9B5;
+$c-footer: #070F2B;
+$font-medium: 500;
+$font-black: 900;
+$font-bold: 700;
+$font-semiBold: 600;
+$font-extraBold: 700;
+
+body {
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $c-font;
+    margin: 0;
+    
+    @media screen and (min-width: 1200px) {
+        font-size: 16px;
+    }
+}
+
+.hero {
+    &__banner {
+        width: 100%;
+        position: relative;
+    }
+    
+    &__h2-left {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__position {
+        position: absolute;
+        right: 20px;
+        top: 110px;
+        line-height: 1.2;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 1200px) {
+            position: absolute;
+            right: 130px;
+            top: 250px;
+            line-height: 1.3;
+        }
+    }
+
+    &__header-h2 {
+        font-size: 14px;
+        background-color: $c-blue-primary;
+        color: $c-hero-header;
+        font-weight: $font-medium;
+        text-transform: uppercase;
+        padding: 5px 10px;
+        display: inline-block;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 30px;
+            background-color: $c-blue-primary;
+            color: $c-hero-header;
+            font-weight: $font-medium;
+            text-transform: uppercase;
+            padding: 5px 20px;
+            display: inline-block;
+        }
+    }
+
+    &__header-h1 {
+        font-size: 30px;
+        color: $c-hero-header;
+        font-weight: $font-black;
+        text-align: right;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 75px;
+            color: $c-hero-header;
+            font-weight: $font-black;
+        }
+    }
+
+    &__date {
+        font-size: 14px;
+        font-weight: $font-medium;
+        background-color: $c-dark-blue;
+        color: $c-white;
+        display: inline-block;
+        padding: 6px 10px;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 30px;
+            font-weight: $font-bold;
+            background-color: $c-dark-blue;
+            color: $c-white;
+            display: inline-block;
+            padding: 6px 10px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 7px;
+
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 7px;
+        }
+    }
+
+    &__logo {
+        width: 50px;
+
+        @media screen and (min-width: 1200px) {
+            width: 100px;
+            margin-top: 10px;
+        }
+    }
+
+    &__image-logo {
+        width: 100%;
+    }
+
+    &__bottom {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-end;
+    }
+
+    &__button-position {
+        position: absolute;
+        bottom: -18px;
+        left: 0;
+        display: inline-block
+    }
+}
+
+.header {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: rgb(255, 255, 255, 0.7);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    
+    padding: 20px;
+
+    @media screen and (min-width: 1200px) {
+        padding: 0;
+        left: 0;
+        top: 60px;
+    }
+    
+    &__menu-position {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        @media screen and (min-width: 1200px) {
+            justify-content: flex-end;
+        }
+    }
+
+    &__logo-position {
+        position: absolute;
+        width: 150px;
+        top: 20px;
+        right: 20px;
+
+        @media screen and (min-width: 1200px) {
+            top: 18px;
+            left: 130px;
+            width: 230px;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+    }
+}
+
+.menu {
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 130px;
+    }
+
+    &__checkbox {
+        position: absolute;
+        left: -9999px; // funkčně je to stejné jako display: none, ale tento příkaz by mohl způsobit, že některé prohlížeče ho nezobrazí vůbec, tak radši nepoužíváme
+    }
+
+    &__toggler {
+        cursor: pointer;
+
+        @media screen and (min-width: 1200px) {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: none; //menu list je standardně schovaný
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @media screen and (min-width: 1200px) {
+            display: flex !important;
+        }
+    }
+
+    &__link {
+        display: block; //řádkový prvek změním na blokový, abych mohla klikat na celý řádek, ne jenom na text
+        font-size: 14px;
+        padding: 13px;
+        text-decoration: none;
+        text-align: center;
+        color: $c-font;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 18px;
+            padding: 25px;
+        }
+    }
+
+    &__link:hover {
+        // color: $c-red-primary;
+        // border-bottom: 1px solid $c-red-primary;
+        color: white;
+        background-color: $c-red-primary;
+    }
+
+    &__checkbox:checked ~ .menu__list {
+        display: block;
+    }
+}
+
+.flags {
+    position: absolute;
+    right: 9999px;
+
+    @media screen and (min-width: 1200px) {
+        position: absolute;
+        top: 20px;
+        right: 130px;
+        display: flex;
+        gap: 10px;
+    }
+}
+
+.visegrad-section {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+    font-style: italic;
+    margin: 15px 0;
+
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 40px 130px 30px;
+        font-size: 16px;
+        gap: 35px;
+    }
+
+
+    &__content {
+        padding: 0 30px 0 30px;
+        text-align: justify;
+
+        @media screen and (min-width: 1200px) {
+            flex-basis: 85%;
+            padding: 0;
+        }
+    }
+
+    &__content--narrow {
+        padding: 0 40px;
+    }
+
+    &__content span {
+        color: $c-red-primary;
+        // cursor: pointer;
+    }
+
+    &__content span:hover {
+        font-weight: $font-semiBold;
+    }
+
+    &__logo {
+        width: 115px;
+
+        @media screen and (min-width: 1200px) {
+            flex-basis: 15%;
+        }
+    }
+
+    &__logo-img {
+        width: 100%;
+    }
+}
+
+.project-info {
+    padding: 0 40px 20px 40px;
+    margin-top: 40px;
+    text-align: left;
+    line-height: 1.5;
+
+    @media screen and (min-width: 1100px) {
+        padding: 30px 150px;
+        margin-top: 0px;
+    }
+}
+
+.project-info__item {
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 40px;
+    }
+
+}
+
+// .project-info__item--center {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     text-align: left;
+// }
+
+.heading-primary {
+    font-size: 23px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 40px;
+        font-weight: $font-extraBold;
+        padding: 60px 130px;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        height: 30px;
+        background:
+            url(/images/bodky.svg) no-repeat top left/auto 10px,
+            url(/images/bodky.svg) no-repeat bottom right/auto 10px,
+            linear-gradient(to top, transparent, transparent 49%, black 49%, black 51%, transparent 51%, transparent);
+        margin: 0;
+
+        @media screen and (min-width: 1200px) {
+            height: 43px;
+            background:
+                url(/images/bodky.svg) no-repeat top left/auto 15px,
+                url(/images/bodky.svg) no-repeat bottom right/auto 15px,
+                linear-gradient(to top, transparent, transparent 49%, black 49%, black 51%, transparent 51%, transparent);
+        }
+    }
+}
+
+.about-us {
+    margin: 0;
+    text-align: justify;
+
+    &__img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover; 
+
+        @media screen and (min-width: 1200px) {
+            padding: 0 220px;
+            height: 520px;
+            margin: 15px 0 15px 0;
+        }
+    }
+
+    &__logo {
+        width: 140px;
+        margin: 10px auto 25px auto;
+
+        @media screen and (min-width: 1200px) {
+            width: 200px;
+            margin: 40px auto 80px auto;
+        }
+    }
+
+    &__logo-img {
+        width: 100%;
+    }
+
+    // Podbarvení textu na modro
+    // .about-us__bckgrnd {
+    //     background-color: rgb(83, 92, 145, 0.3);
+    // }
+
+    &__position p {
+        padding: 15px 30px;
+        margin: 0;
+
+        @media screen and (min-width: 1200px) {
+            padding: 15px 330px;
+        }
+    }
+
+    &__sentence-center {
+        text-align: center;
+    }
+}
+
+.artists {
+
+    &__align {
+        padding: 0 30px 0 30px;
+
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 0 130px 0 130px;
+        }
+    }
+}
+
+.card {
+    width: 100%;
+    background-color: $c-white;
+    border: 0.7px solid rgb(233, 230, 230);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 25px;
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &:hover {
+        background-color: rgb(83, 92, 145, 0.3);
+    }
+
+    &__foto {
+        // flex-basis: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__content {
+        // flex-basis: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        @media screen and (min-width: 1200px) {
+            align-items: center;
+            gap: 12px;
+            text-align: center;
+        }
+    }
+
+    &__header {
+        font-size: 17px;
+        font-weight: $font-bold;
+        margin: 0;
+        padding-top: 10px;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 20px;
+        }
+
+    }
+
+    &__content-size {
+        font-size: 14px;
+    }
+
+    &__img {
+        max-width: 80%;
+        border-radius: 70%;
+        // box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        @media screen and (min-width: 1200px) {
+            max-width: 90%;
+        }
+    }
+
+    .card__logo {
+        position: absolute;
+        bottom: -10px;
+        right: 10px;
+        width: 90px;
+        height: 90px;
+
+        @media screen and (min-width: 1200px) {
+            right: 0px;
+            bottom: -15px;
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    &__svg {
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.button {
+    display: block;
+    position: relative;
+
+    &__link {
+        display: block;
+        font-size: 12px;
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-weight: $font-semiBold;
+        text-align: center;
+        border-radius: 20px;
+        background-color: $c-red-primary;
+        color: $c-white;
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 0px;
+            font-size: 14px;
+        }
+    }
+
+    &__link:hover {
+        background-color: rgb(178, 20, 70);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        color: $c-white;
+    }
+
+    &__link--light {
+        background-color: rgb(242, 240, 240);
+        color: $c-font;
+    }
+
+    &__link--light:hover {
+        background-color: $c-red-primary;
+        color: $c-white;
+    }
+
+    &__link--icon {
+        font-size: 14px;
+        padding: 5px 15px 5px 40px;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 20px;
+            padding: 8px 20px 8px 48px;
+        }
+    }
+
+    &-icon-size {
+        width: 12px;
+
+        @media screen and (min-width: 1200px) {
+            width: 14px;
+        }
+    }
+
+    &__icon {
+        width: 100%;
+        position: relative;
+        left: 17px;
+        bottom: 25px;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 20px;
+            left: 22px;
+            bottom: 29px;
+        }
+    }
+}
+
+.partners {
+    &__content {
+        text-align: center;
+
+        @media screen and (min-width: 1200px) {
+            padding: 0 170px 0 170px;
+        }
+    }
+
+    &__align {
+        padding: 0 30px 0 30px;
+
+        @media screen and (min-width: 1200px) {
+            padding: 0 130px 0 130px;
+        }
+
+    }
+
+    &__content {
+        margin-top: 0;
+    }
+
+    &__logo-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 100px;
+        gap: 14px;
+        padding: 20px;
+
+        @media screen and (min-width: 1200px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 140px;
+        }
+
+    }
+
+    &__logo {
+        max-width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__logo--small {
+        padding: 17px;
+
+        @media screen and (min-width: 1200px) {
+            padding: 25px;
+        }
+    }
+
+    &__logo-center {
+        margin: 32px auto 32px auto;
+        width: 160px;
+
+        @media screen and (min-width: 1200px) {
+            width: 230px;
+            margin: 60px auto 60px auto;
+        }
+    }
+
+    &__contacts {
+        padding: 0 30px 0 30px;
+
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 150px 20px 150px;
+            border-top: 0.5px solid $c-font;
+        }
+    }
+
+    &__contact-section {
+        padding: 10px;
+
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__contact-section--border {
+        border-bottom: 0.5px solid $c-font;
+        border-top: 0.5px solid $c-font;
+
+        @media screen and (min-width: 1200px) {
+            border: none;
+        }
+    }
+
+    &__header-h2 {
+        font-size: 16px;
+        text-align: center;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 22px;
+        }
+    }
+
+    &__icon-size {
+        width: 45px;
+        margin: 20px auto 20px auto;
+        // border-bottom: 0.9px solid $c-font;
+    }
+
+    &__contacts-icon {
+        max-width: 100%;
+    }
+
+    &__form-align {
+        width: 250px;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin: 0 auto 0 auto;
+
+        @media screen and (min-width: 1200px) {
+            width: 290px;
+            gap: 8px;
+        }
+    }
+
+    &__contact-section--margin {
+        margin-bottom: 30px;
+    }
+
+    &__email-center {
+        margin: 0 auto 0 auto;
+
+        @media screen and (min-width: 1200px) {
+            margin: 0;
+        }
+    }
+}
+
+.footer {
+    background-color: $c-footer;
+    font-size: 10px;
+    color: $c-white;
+    text-align: center;
+    padding: 25px;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 12px;
+        padding: 35px;
+    }
+}
+
+.archive {
+    &__episode {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 30px 0;
+        line-height: 1.2;
+    }
+
+    &__episode:hover {
+        background-color: rgb(83, 92, 145, 0.3); ;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__header {
+        font-size: 17px;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+
+    &__date {
+        font-weight: 700;
+    }
+
+    &__markdown {
+        line-height: 0.9;
+        margin: 25px 0;
+    }
 }
