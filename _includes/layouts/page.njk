@@ -1,0 +1,33 @@
+---
+layout: layouts/main-template
+---
+
+<!-- Tady je hlavička -->
+
+<section class="hero" id="home">
+
+    {% include "partials/hero-image.njk" %}
+
+    {% include "partials/hero-content.njk" %}
+
+    {% include "partials/hero-menu.njk" %}
+
+    {% include "partials/hero-flags.njk" %}
+
+</section>
+
+<!-- Tady je konec hlavičky -->
+
+
+<!-- Tady je hlavní obsah -->
+
+{{ content | safe }}
+
+<!-- Tady je konec hlavního obsahu -->
+
+
+<!-- Tady je patička -->
+
+{% include "partials/footer.njk" %}
+
+<!-- Konec patičky -->
