@@ -25,17 +25,24 @@ layout: layouts/main-template.njk
 
 <div class="archive__episode">
     <div class="archive__picture">
-        <img class="archive__img" src="/images/{{ foto }}" alt="{{ alt }}">
+        <div class="archive__position">
+            <a href="{{ link }}"><img class="archive__img" src="/images/{{ foto }}" alt="{{ alt }}"></a>
+            <div class="archive-button">
+                <a class="archive-button__link" href="{{ link }}"><img class="archive-button__icon" src="/images/play_icon_plna.svg" alt="play icon"></a>
+            </div>
+        </div>
     </div>
+
     <div class="archive__content">
         <div class="archive__header">{{ title }}</div>
-        <div class="archive__perex">{{ perex }}</div>
+        <div class="archive__markdown">
+            {{ perex }}
+        </div>
         <div class="archive__date">{{ datum }} | RTVS 2</div>
     </div>
 </div>
 
 <!-- Tady je konec hlavního obsahu -->
-
 
 <!-- Tady je patička -->
 

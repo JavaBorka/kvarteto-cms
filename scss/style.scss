@@ -767,7 +767,7 @@ body {
         display: flex;
         gap: 15px;
         justify-content: space-between;
-        padding: 30px;
+        padding: 10px 30px 45px 30px;
 
         @media screen and (min-width: 1200px) {
             padding: 35px 280px;
@@ -781,29 +781,51 @@ body {
 
     &__picture {
         flex-basis: 45%;
-        position: relative
     }
 
     &__picture:hover {
-        
+
         .archive-button {
             display: inline-block;
             position: absolute;
             background-color: $c-red-primary;
-            padding: 14px;
+            padding: 10px 14px 25px 14px;
             border-radius: 40%;
+            left: 10px;
+            bottom: 12px;
             width: 50px;
-            left: 20px;
-            bottom: 17px;
-            width: 65px;
-            height: 45px;
-            display: flex;
-            justify-content: center;
+            height: 18px;
+        
+            @media screen and (min-width: 1200px) {
+                display: inline-block;
+                position: absolute;
+                background-color: $c-red-primary;
+                padding: 14px 14px 14px 17px;
+                border-radius: 40%;
+                left: 20px;
+                bottom: 17px;
+                width: 65px;
+                height: 45px;
+            }
         
             &__icon {
-                width: 100%;
-                margin: 0px;
-                padding: 0px;
+                width: 60%;
+        
+                @media screen and (min-width: 1200px) {
+                    width: 50%;
+                }
+            }
+        
+            &__link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        
+                @media screen and (min-width: 1200px) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
     }
@@ -821,8 +843,7 @@ body {
         font-weight: 700;
 
         @media screen and (min-width: 1200px) {
-            font-size: 22px;
-            padding-top: 10px;
+            font-size: 20px;
         }
     }
 
@@ -834,25 +855,59 @@ body {
         line-height: 1.4;
         margin: 15px 0;
     }
+
+    &__position {
+        position: relative;
+    }
+
+    &__link {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        line-height: 1;
+    }
 }
 
 .archive-button {
     display: inline-block;
     position: absolute;
     background-color: rgba(0,0,0, .5);
-    padding: 14px;
+    padding: 10px 14px 25px 14px;
     border-radius: 40%;
+    left: 10px;
+    bottom: 12px;
     width: 50px;
-    left: 20px;
-    bottom: 17px;
-    width: 65px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
+    height: 18px;
+
+    @media screen and (min-width: 1200px) {
+        display: inline-block;
+        position: absolute;
+        background-color: rgba(0,0,0, .5);
+        padding: 14px 14px 14px 17px;
+        border-radius: 40%;
+        left: 20px;
+        bottom: 17px;
+        width: 65px;
+        height: 45px;
+    }
 
     &__icon {
-        width: 100%;
-        margin: 0px;
-        padding: 0px;
+        width: 60%;
+
+        @media screen and (min-width: 1200px) {
+            width: 50%;
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }
