@@ -6,9 +6,40 @@ layout: layouts/main-template
 
 <section class="hero" id="home">
 
-    {% include "partials/hero-image.njk" %}
+    {% for hero in collections.hero | reverse | limit(1) %}
 
-    {% include "partials/hero-content.njk" %}
+    <div>
+        <div class="hero__banner">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="/images/{{ hero.data.foto1440 }}">
+                <source media="(max-width: 450px)" srcset="/images/{{ hero.data.foto1024 }}">
+                <img class="hero__image" src="/images/{{ hero.data.foto1024 }}" alt="{{ hero.data.alt }}">
+            </picture>
+        </div>
+
+        <div class="hero__position">
+            <div class="hero__content">
+                <div class="hero__h2-left">
+                    <div class="hero__header-h2">Latest episode</div>
+                </div>
+                <div class="hero__header-h1">{{ hero.data.title }}</div>
+                <div class="hero__date">{{ hero.data.datum }} | RTVS: 2</div>
+                <div class="hero__logo">
+                    <img class="hero__image-logo" src="/images/logo_DVOJKA_biele.svg" alt="logo of RTVS:2">
+                </div>
+            </div>
+            <div class="hero__button-position">
+                <nav class="button">
+                    <a class="button__link  button__link--icon" href="{{ hero.data.link }}">Play episode</a>
+                    <div class="button-icon-size">
+                        <img class="button__icon" src="/images/play_icon_plna.svg" alt="play icon">
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
 
     {% include "partials/hero-menu.njk" %}
 

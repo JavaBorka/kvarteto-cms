@@ -6,9 +6,7 @@ layout: layouts/main-template.njk
 
 <section class="hero" id="home">
 
-    {% include "partials/hero-image.njk" %}
-
-    {% include "partials/hero-content.njk" %}
+    {% include "layouts/hero-episode.njk" %}
 
     {% include "partials/hero-menu.njk" %}
 
@@ -34,13 +32,15 @@ layout: layouts/main-template.njk
     </div>
 
     <div class="archive__content">
-        <div class="archive__header">{{ title }}</div>
+        <a class="archive__link" href="{{ link }}"><div class="archive__header">{{ title }}</div></a>
         <div class="archive__markdown">
             {{ perex }}
         </div>
         <div class="archive__date">{{ datum }} | RTVS 2</div>
     </div>
 </div>
+
+{{ content | safe }}
 
 <!-- Tady je konec hlavního obsahu -->
 

@@ -126,7 +126,7 @@ title: Kvarteto
 <section class="archive">
     <h1 class="heading-primary" id="archive">Episodes</h1>
 
-    {% for archive in collections.archive | reverse %}
+    {% for archive in collections.archive | reverse | limit(2) %}
 
     <div class="archive__episode">
         <div class="archive__picture">
@@ -139,7 +139,7 @@ title: Kvarteto
         </div>
 
         <div class="archive__content">
-            <div class="archive__header">{{ archive.data.title}}</div>
+            <a class="archive__link" href="{{ archive.data.link }}"><div class="archive__header">{{ archive.data.title }}</div></a>
             <div class="archive__markdown">
                 {{ archive.data.perex }}
             </div>
