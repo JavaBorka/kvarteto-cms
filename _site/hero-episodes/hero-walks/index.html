@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/style.css">
         <title>Neobyčejné vycházky</title>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
 
     <body>
@@ -19,9 +20,9 @@
 
     <div class="hero__banner">
         <picture>
-            <source media="(min-width: 1200px)" srcset="/images/Walks_1440x825.jpg">
-            <source media="(max-width: 450px)" srcset="/images/Walks_1024x768.jpg">
-            <img class="hero__image" src="/images/Walks_1024x768.jpg" alt="Old craft main picture">
+            <source media="(min-width: 1200px)" srcset="Walks_1440x825.jpg">
+            <source media="(max-width: 450px)" srcset="Walks_1024x768.jpg">
+            <img class="hero__image" src="Walks_1024x768.jpg" alt="Old craft main picture">
         </picture>
     </div>
 
@@ -99,6 +100,18 @@
 </footer>
 
 <!-- Konec patičky -->
+
+        <script>
+            if (window.netlifyIdentity) {
+              window.netlifyIdentity.on("init", (user) => {
+                if (!user) {
+                  window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                  });
+                }
+              });
+            }
+          </script>
 
     </body>
 

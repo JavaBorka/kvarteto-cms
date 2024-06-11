@@ -8,9 +8,9 @@ layout: layouts/main-template.njk
 
     <div class="hero__banner">
         <picture>
-            <source media="(min-width: 1200px)" srcset="/images/{{ foto1440 }}">
-            <source media="(max-width: 450px)" srcset="/images/{{ foto1024 }}">
-            <img class="hero__image" src="/images/{{ foto1024 }}" alt="{{ alt }}">
+            <source media="(min-width: 1200px)" srcset="{{ foto1440 }}">
+            <source media="(max-width: 450px)" srcset="{{ foto1024 }}">
+            <img class="hero__image" src="{{ foto1024 }}" alt="{{ alt }}">
         </picture>
     </div>
 

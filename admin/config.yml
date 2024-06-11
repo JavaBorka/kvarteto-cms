@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "images/uploads"
+collections:
+  - name: "archive-episodes"
+    label: "Archive-episodes"
+    folder: "archive-episodes"
+    create: true
+    slug: "{{slug}}"
+    fields: # The fields for each document, usually in front matter
+      - { label: "Template", name: "layout", widget: "hidden", default: "layouts/archive-episode.njk" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "archive" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Text", name: "perex", widget: "string" }
+      - { label: "Premiere date", name: "datum", widget: "string" }
+      - { label: "Image 357x206", name: "foto", widget: "image" }
+      - { label: "Image label", name: "alt", widget: "string" }
+      - { label: "URL to TV archive", name: "link", widget: "string" }
+      - { label: "Content", name: "body", widget: "hidden" }
+  - name: "hero-episodes"
+    label: "Hero-episodes"
+    folder: "hero-episodes"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Template", name: "layout", widget: "hidden", default: "layouts/hero-episode.njk" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "hero" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Premiere date", name: "datum", widget: "string" }
+      - { label: "Image 1024x768", name: "foto1024", widget: "image" }
+      - { label: "Image 1440x825", name: "foto1440", widget: "image" }
+      - { label: "Image label", name: "alt", widget: "string" }
+      - { label: "URL to TV archive", name: "link", widget: "string" }
+      - { label: "Content", name: "body", widget: "hidden" }
