@@ -1,7 +1,7 @@
 ---
 layout: layouts/archive-episode.njk
 tags: archive
-title: RAW food
+title: RAW food growers
 perex: ČT Ostrava - Borůvky | MTVA Szeged - Maliny | RTVS Košice - Hríby | TVP
   Kraków - Zubrowka
 datum: 25. 6. 2024
