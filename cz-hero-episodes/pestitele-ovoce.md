@@ -1,8 +1,8 @@
 ---
 layout: layouts/non-en-hero-episode.njk
-header: Poslední epizoda
+header: Poslední díl
 tv: ČT 2
-cta: Přehrát epizodu
+cta: Přehrát díl
 logo: logo_DVOJKA_biele.svg
 tags: czhero
 title: Pěstitelé ovoce
