@@ -1,100 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/css/style.css">
-        <title>Kvarteto</title>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    </head>
-
-    <body>
-
-        
-<!-- Tady je hlavička -->
-
-<section class="hero" id="home">
-
-    
-
-    <div>
-        <div class="hero__banner">
-            <picture>
-                <source media="(min-width: 1200px)" srcset="/images/uploads/boruvky_1440x825.jpg">
-                <source media="(max-width: 450px)" srcset="/images/uploads/boruvky_1024x768.jpg">
-                <img class="hero__image" src="/images/uploads/boruvky_1024x768.jpg" alt="Blueberries">
-            </picture>
-        </div>
-
-        <div class="hero__position">
-            <div class="hero__content">
-                <div class="hero__h2-left">
-                    <div class="hero__header-h2">Latest episode</div>
-                </div>
-                <div class="hero__header-h1">RAW food growers</div>
-                <div class="hero__date">25. 6. 2024 | RTVS: 2</div>
-                <div class="hero__logo">
-                    <img class="hero__image-logo" src="/images/logo_DVOJKA_biele.svg" alt="logo of RTVS:2">
-                </div>
-            </div>
-            <div class="hero__button-position">
-                <nav class="button">
-                    <a class="button__link  button__link--icon" href="https://www.rtvs.sk/televizia/archiv/14252">Play episode</a>
-                    <div class="button-icon-size">
-                        <img class="button__icon" src="/images/play_icon_plna.svg" alt="play icon">
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-
-    
-
-        <!-- Tady je menu -->
-
-    <header class="header">
-
-        <div class="header__logo-position">
-            <img class="header__logo" src="/images/kvarteto_logo.svg" alt="logo of Kvarteto">
-        </div>
-    
-        <div class="header__menu-position">
-            <nav class="menu">
-                <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
-    
-                <label for="menu-checkbox" class="menu__toggler">☰</label>
-    
-                <ul class="menu__list">
-                    <li class="menu__item"><a class="menu__link" href="/#home">Home</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/#about">About</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/#creators">Creators</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#archive">Archive</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/#contact">Contacts</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Tady je konec menu -->
-
-    <div class="flags">
-    <a href="/cz/#home"><img class="flags__image-flag-cz" src="/images/czech republic.svg" alt="flag of Czech Republic"></a>
-    <a href="/sk/#home"><img class="flags__image-flag-sk" src="/images/slovakia.svg" alt="flag of Slovak Republic"></a>
-    <a href="/pl/#home"><img class="flags__image-flag-pl" src="/images/poland.svg" alt="flag of Poland"></a>
-    <a href="/hu/#home"><img class="flags__image-flag-hu" src="/images/hungary.svg" alt="flag of Hungary"></a>
-    <a href="/#home"><img class="flags__image-flag-en" src="/images/united kingdom.svg" alt="flag of England"></a>
-</div>
-
-</section>
-
-<!-- Tady je konec hlavičky -->
-
-
-<!-- Tady je hlavní obsah -->
-
+---
+layout: layouts/hu-page.njk
+title: Kvarteto
+---
 
 <!-- Tady je Visegrad sekce -->
 
@@ -103,7 +10,7 @@
         <a class="visegrad-section__link" href="https://visegradfund.org/"><img class="visegrad-section__logo-img" src="/images/visegrad_fund_black.svg" alt="logo of Visegrad Fund"></a>
     </div>
     <div class="visegrad-section__content">
-        The project is co-financed by the Governments of Czechia, Hungary, Poland and Slovakia through Visegrad Grants from International Visegrad Fund. The mission of the fund is to advance ideas for sustainable regional cooperation in Central Europe. Read more about project <span><a href="/visegrad">here</a></span>.
+        Projekt je financovaný: The project is co-financed by the Governments of Czechia, Hungary, Poland and Slovakia through Visegrad Grants from International Visegrad Fund. The mission of the fund is to advance ideas for sustainable regional cooperation in Central Europe. Read more about project <span><a href="/hu/visegrad">here</a></span>.
     </div>
 </section>
 
@@ -113,10 +20,10 @@
 <!-- Tady je hlavní obsah -->
 
 <section class="about-us">
-    <h1 class="heading-primary" id="about">About us</h1>
+    <h1 class="heading-primary" id="about">O nás</h1>
     <div class="about-us__position">
         <p>
-            Four TV Studios from public service televisions of each of the Visegrad Four countries prepare a common TV magazine monthly.
+            Štyri televízne štúdiá: Four TV Studios from public service televisions of each of the Visegrad Four countries prepare a common TV magazine monthly.
         </p>
         <p>
             All the four partners have always been equal cooperators. We began to prepare a common television magazine called QUARTET in 2000. Since then we have never ceased to produce it, although the directors general and political situations changed. RTVS - TV Studio Košice, ČT -  TV Studio Brno and Ostrava, MTVA - Duna TV Szeged, TVP - TVP3 Rzeszow.
@@ -132,7 +39,7 @@
 </section>
 
 <section class="artists">
-    <h1 class="heading-primary" id="creators">Creators</h1>
+    <h1 class="heading-primary" id="creators">Tvorcovia</h1>
     <div class="artists__align">
         <div class="card">
             <div class="card__foto">
@@ -217,72 +124,30 @@
 <!-- Tady začíná sekce archív -->
 
 <section class="archive">
-    <h1 class="heading-primary" id="archive">Latest episodes</h1>
+    <h1 class="heading-primary" id="archive">Posledné diely</h1>
 
-    
+    {% for archive in collections.archive | reverse | limit(3) %}
 
     <div class="archive__episode">
         <div class="archive__picture">
             <div class="archive__position">
-                <a href="https://www.rtvs.sk/televizia/archiv/14252"><img class="archive__img" src="/images/uploads/boruvky_357x206.jpg" alt="Blueberries"></a>
+                <a href="{{ archive.data.link }}"><img class="archive__img" src="{{ archive.data.foto }}" alt="{{ archive.data.alt }}"></a>
                 <div class="archive-button">
-                    <a class="archive-button__link" href="https://www.rtvs.sk/televizia/archiv/14252"><img class="archive-button__icon" src="/images/play_icon_plna.svg" alt="play icon"></a>
+                    <a class="archive-button__link" href="{{ archive.data.link }}"><img class="archive-button__icon" src="/images/play_icon_plna.svg" alt="play icon"></a>
                 </div>
             </div>
         </div>
 
         <div class="archive__content">
-            <a class="archive__link" href="https://www.rtvs.sk/televizia/archiv/14252"><div class="archive__header">RAW food growers</div></a>
+            <a class="archive__link" href="{{ archive.data.link }}"><div class="archive__header">{{ archive.data.title }}</div></a>
             <div class="archive__markdown">
-                ČT Ostrava - Borůvky | MTVA Szeged - Maliny | RTVS Košice - Hríby | TVP Kraków - Zubrowka
+                {{ archive.data.perex }}
             </div>
-            <div class="archive__date">25. 6. 2024 | RTVS 2</div>
+            <div class="archive__date">{{ archive.data.datum }} | RTVS 2</div>
         </div>
     </div>
 
-    
-
-    <div class="archive__episode">
-        <div class="archive__picture">
-            <div class="archive__position">
-                <a href="https://www.rtvs.sk/televizia/archiv/14252/456124"><img class="archive__img" src="/images/uploads/Walks_357x206.jpg" alt="Walks main picture"></a>
-                <div class="archive-button">
-                    <a class="archive-button__link" href="https://www.rtvs.sk/televizia/archiv/14252/456124"><img class="archive-button__icon" src="/images/play_icon_plna.svg" alt="play icon"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="archive__content">
-            <a class="archive__link" href="https://www.rtvs.sk/televizia/archiv/14252/456124"><div class="archive__header">Neobyčejné vycházky</div></a>
-            <div class="archive__markdown">
-                ČT Ostrava - Kovářství na Helfštýně | MTVA Szeged - Kartáčníci | RTVS Košice - Tkalcovství | TVP Kraków - Patchwork
-            </div>
-            <div class="archive__date">23. 3. 2024 | RTVS 2</div>
-        </div>
-    </div>
-
-    
-
-    <div class="archive__episode">
-        <div class="archive__picture">
-            <div class="archive__position">
-                <a href="https://www.rtvs.sk/televizia/archiv/14252/456124"><img class="archive__img" src="/images/uploads/business_357x206.jpg" alt="Old craft main picture"></a>
-                <div class="archive-button">
-                    <a class="archive-button__link" href="https://www.rtvs.sk/televizia/archiv/14252/456124"><img class="archive-button__icon" src="/images/play_icon_plna.svg" alt="play icon"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="archive__content">
-            <a class="archive__link" href="https://www.rtvs.sk/televizia/archiv/14252/456124"><div class="archive__header">Starodávná řemesla</div></a>
-            <div class="archive__markdown">
-                ČT Ostrava - Kovářství na Helfštýně | MTVA Szeged - Kartáčníci | RTVS Košice - Tkalcovství | TVP Kraków - Patchwork
-            </div>
-            <div class="archive__date">23. 3. 2024 | RTVS 2</div>
-        </div>
-    </div>
-
-    
+    {% endfor %}
 
     <!-- <div class="archive__episode">
         <div class="archive__picture">
@@ -306,16 +171,16 @@
 
 
 <section class="partners">
-    <h1 class="heading-primary" id="contact">Partners</h1>
+    <h1 class="heading-primary" id="contact">Partneri</h1>
     <div class="partners__align">
-        <p class="partners__content">We thank all partners in Czech Republic, Hungary, Slovakia and Poland for all your support.</p>
+        <p class="partners__content">Ďakujeme: We thank all partners in Czech Republic, Hungary, Slovakia and Poland for all your support.</p>
         <div class="partners__logo-grid">
             <a href="https://www.ceskatelevize.cz/"><img class="partners__logo" src="/images/Ceska_televize.svg" alt="logo of Ceska Televize TV"></a> 
             <a href="https://mediaklikk.hu/"><img class="partners__logo partners__logo--small" src="/images/Duna_logo_2012.png" alt="logo of Duna TV"></a>
             <a href="https://www.rtvs.sk/"><img class="partners__logo partners__logo--small" src="/images/RTV.svg" alt="logo of RTVS TV"></a>
             <a href="https://www.tvp.pl/"><img class="partners__logo partners__logo--small" src="/images/TVP.svg" alt="logo of TVP TV"></a>
         </div>
-        <p class="partners__content">Supported by</p>
+        <p class="partners__content">S podporou: Supported by</p>
         <div class="partners__logo-center">
             <a class="partners__logo-link" href="https://www.visegradfund.org/"><img class="partners__logo" src="/images/visegrad_fund_blue.svg" alt="logo of Visegrad Fund"></a>
         </div>
@@ -323,14 +188,14 @@
 
     <div class="partners__contacts">
         <div class="partners__contact-section partners__contact-section--border">
-            <h2 class="partners__header-h2">Kvarteto on social networks</h2>
+            <h2 class="partners__header-h2">Kvarteto na sociálnych sieťach</h2>
             <div class="partners__icon-size">
                 <a href="https://www.facebook.com/KwartetKvartetoKvartett"><img class="partners__contacts-icon" src="/images/facebook.svg" alt="facebook icon"></a>
             </div>
         </div>
         <div class="partners__contact-section partners__contact-section--margin">
             <div class="partners__header-align">
-                <h2 class="partners__header-h2">Contact us</h2>
+                <h2 class="partners__header-h2">Kontaktujte nás</h2>
             </div>
             <div class="partners__form-align">
                 <div class="partners__email-center">kolova.redakcia@gmail.com</div>
@@ -357,34 +222,3 @@
 </section>
 
 <!-- Tady je konec hlavního obsahu -->
-
-
-
-
-
-<!-- Tady je konec hlavního obsahu -->
-
-
-<!-- Tady je patička -->
-
-<footer class="footer">
-    <p class="footer__content">Copyright © 2024 KVARTETO | All rights reserved.</p>
-</footer>
-
-<!-- Konec patičky -->
-
-        <script>
-            if (window.netlifyIdentity) {
-              window.netlifyIdentity.on("init", (user) => {
-                if (!user) {
-                  window.netlifyIdentity.on("login", () => {
-                    document.location.href = "/admin/";
-                  });
-                }
-              });
-            }
-          </script>
-
-    </body>
-
-</html>
