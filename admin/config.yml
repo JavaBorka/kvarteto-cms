@@ -17,7 +17,8 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Text", name: "perex", widget: "string" }
       - { label: "Premiere date", name: "datum", widget: "string" }
-      - { label: "Image 357x206", name: "foto", widget: "image" }
+      - { label: "TV", name: "tv", widget: "hidden", default: "RTVS :2" }
+      - { label: "Image 357x206 upload", name: "foto", widget: "image" }
       - { label: "Image label", name: "alt", widget: "string" }
       - { label: "URL to TV archive", name: "link", widget: "string" }
       - { label: "Content", name: "body", widget: "hidden" }
