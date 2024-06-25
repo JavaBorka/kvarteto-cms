@@ -1,5 +1,5 @@
 ---
-layout: layouts/sk-page.njk
+layout: layouts/page.njk
 title: Kvarteto
 ---
 
@@ -10,7 +10,7 @@ title: Kvarteto
         <a class="visegrad-section__link" href="https://visegradfund.org/"><img class="visegrad-section__logo-img" src="/images/visegrad_fund_black.svg" alt="logo of Visegrad Fund"></a>
     </div>
     <div class="visegrad-section__content">
-        Projekt je financovaný: The project is co-financed by the Governments of Czechia, Hungary, Poland and Slovakia through Visegrad Grants from International Visegrad Fund. The mission of the fund is to advance ideas for sustainable regional cooperation in Central Europe. Read more about project <span><a href="/sk/visegrad">here</a></span>.
+        The project is co-financed by the Governments of Czechia, Hungary, Poland and Slovakia through Visegrad Grants from International Visegrad Fund. The mission of the fund is to advance ideas for sustainable regional cooperation in Central Europe. Read more about project <span><a href="/visegrad">here</a></span>.
     </div>
 </section>
 
@@ -20,10 +20,10 @@ title: Kvarteto
 <!-- Tady je hlavní obsah -->
 
 <section class="about-us">
-    <h1 class="heading-primary" id="about">O nás</h1>
+    <h1 class="heading-primary" id="about">About us</h1>
     <div class="about-us__position">
         <p>
-            Štyri televízne štúdiá: Four TV Studios from public service televisions of each of the Visegrad Four countries prepare a common TV magazine monthly.
+            Four TV Studios from public service televisions of each of the Visegrad Four countries prepare a common TV magazine monthly.
         </p>
         <p>
             All the four partners have always been equal cooperators. We began to prepare a common television magazine called QUARTET in 2000. Since then we have never ceased to produce it, although the directors general and political situations changed. RTVS - TV Studio Košice, ČT -  TV Studio Brno and Ostrava, MTVA - Duna TV Szeged, TVP - TVP3 Rzeszow.
@@ -39,7 +39,7 @@ title: Kvarteto
 </section>
 
 <section class="artists">
-    <h1 class="heading-primary" id="creators">Tvorcovia</h1>
+    <h1 class="heading-primary" id="creators">Creators</h1>
     <div class="artists__align">
         <div class="card">
             <div class="card__foto">
@@ -120,17 +120,18 @@ title: Kvarteto
     </div>
 </section>
 
+
 <!-- Tady začíná sekce archív -->
 
 <section class="archive">
     <h1 class="heading-primary" id="archive">Latest episodes</h1>
 
-    {% for archive in collections.skarchive | reverse | limit(3) %}
+    {% for archive in collections.archive | reverse | limit(3) %}
 
     <div class="archive__episode">
         <div class="archive__picture">
             <div class="archive__position">
-                <a href="{{ archive.data.link }}"><img class="archive__img" src="/images/uploads/{{ archive.data.foto }}" alt="{{ archive.data.alt }}"></a>
+                <a href="{{ archive.data.link }}"><img class="archive__img" src="{{ archive.data.foto }}" alt="{{ archive.data.alt }}"></a>
                 <div class="archive-button">
                     <a class="archive-button__link" href="{{ archive.data.link }}"><img class="archive-button__icon" src="/images/play_icon_plna.svg" alt="play icon"></a>
                 </div>
@@ -170,16 +171,16 @@ title: Kvarteto
 
 
 <section class="partners">
-    <h1 class="heading-primary" id="contact">Partneri</h1>
+    <h1 class="heading-primary" id="contact">Partners</h1>
     <div class="partners__align">
-        <p class="partners__content">Ďakujeme: We thank all partners in Czech Republic, Hungary, Slovakia and Poland for all your support.</p>
+        <p class="partners__content">We thank all partners in Czech Republic, Hungary, Slovakia and Poland for all your support.</p>
         <div class="partners__logo-grid">
             <a href="https://www.ceskatelevize.cz/"><img class="partners__logo" src="/images/Ceska_televize.svg" alt="logo of Ceska Televize TV"></a> 
             <a href="https://mediaklikk.hu/"><img class="partners__logo partners__logo--small" src="/images/Duna_logo_2012.png" alt="logo of Duna TV"></a>
             <a href="https://www.rtvs.sk/"><img class="partners__logo partners__logo--small" src="/images/RTV.svg" alt="logo of RTVS TV"></a>
             <a href="https://www.tvp.pl/"><img class="partners__logo partners__logo--small" src="/images/TVP.svg" alt="logo of TVP TV"></a>
         </div>
-        <p class="partners__content">S podporou: Supported by</p>
+        <p class="partners__content">Supported by</p>
         <div class="partners__logo-center">
             <a class="partners__logo-link" href="https://www.visegradfund.org/"><img class="partners__logo" src="/images/visegrad_fund_blue.svg" alt="logo of Visegrad Fund"></a>
         </div>
@@ -187,14 +188,14 @@ title: Kvarteto
 
     <div class="partners__contacts">
         <div class="partners__contact-section partners__contact-section--border">
-            <h2 class="partners__header-h2">Kvarteto na sociálnych sieťach</h2>
+            <h2 class="partners__header-h2">Kvarteto on social networks</h2>
             <div class="partners__icon-size">
                 <a href="https://www.facebook.com/KwartetKvartetoKvartett"><img class="partners__contacts-icon" src="/images/facebook.svg" alt="facebook icon"></a>
             </div>
         </div>
         <div class="partners__contact-section partners__contact-section--margin">
             <div class="partners__header-align">
-                <h2 class="partners__header-h2">Kontaktujte nás</h2>
+                <h2 class="partners__header-h2">Contact us</h2>
             </div>
             <div class="partners__form-align">
                 <div class="partners__email-center">kolova.redakcia@gmail.com</div>

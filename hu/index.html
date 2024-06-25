@@ -124,14 +124,14 @@ title: Kvarteto
 <!-- Tady začíná sekce archív -->
 
 <section class="archive">
-    <h1 class="heading-primary" id="archive">Posledné diely</h1>
+    <h1 class="heading-primary" id="archive">Latest episodes</h1>
 
-    {% for archive in collections.archive | reverse | limit(3) %}
+    {% for archive in collections.huarchive | reverse | limit(3) %}
 
     <div class="archive__episode">
         <div class="archive__picture">
             <div class="archive__position">
-                <a href="{{ archive.data.link }}"><img class="archive__img" src="{{ archive.data.foto }}" alt="{{ archive.data.alt }}"></a>
+                <a href="{{ archive.data.link }}"><img class="archive__img" src="/images/uploads/{{ archive.data.foto }}" alt="{{ archive.data.alt }}"></a>
                 <div class="archive-button">
                     <a class="archive-button__link" href="{{ archive.data.link }}"><img class="archive-button__icon" src="/images/play_icon_plna.svg" alt="play icon"></a>
                 </div>
@@ -143,7 +143,7 @@ title: Kvarteto
             <div class="archive__markdown">
                 {{ archive.data.perex }}
             </div>
-            <div class="archive__date">{{ archive.data.datum }} | RTVS 2</div>
+            <div class="archive__date">{{ archive.data.datum }} | {{ archive.data.tv }}</div>
         </div>
     </div>
 
