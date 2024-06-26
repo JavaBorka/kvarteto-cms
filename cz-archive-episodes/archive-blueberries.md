@@ -1,7 +1,7 @@
 ---
 layout: layouts/non-en-archive-episode.njk
 tags: czarchive
-date: "2024-06-25"
+date: "2022-06-25"
 title: Pěstitelé ovoce
 perex: ČT Ostrava - Borůvky | MTVA Szeged - Maliny | RTVS Košice - Hríby | TVP
   Kraków - Zubrowka
