@@ -8,4 +8,5 @@ foto: business_357x206.jpg
 alt: Old craft main picture
 perex: ČT Ostrava - Kovářství na Helfštýně | MTVA Szeged - Kartáčníci | RTVS Košice - Tkalcovství | TVP Kraków - Patchwork
 tags: czarchive
+date: "2024-03-23"
 ---

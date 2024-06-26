@@ -1,6 +1,7 @@
 ---
 layout: layouts/non-en-archive-episode.njk
 tags: czarchive
+date: "2024-09-21"
 title: Firma na voňavky
 perex: ČT Ostrava - firma na výrobu voňavek
 datum: 21. 9. 2024

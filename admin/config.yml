@@ -121,6 +121,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: "Template", name: "layout", widget: "hidden", default: "layouts/non-en-archive-episode.njk" }
       - { label: "Tags", name: "tags", widget: "hidden", default: "czarchive" }
+      - { label: "Date", name: "date", widget: "hidden", default: "Created" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Text", name: "perex", widget: "string" }
       - { label: "Premiere date", name: "datum", widget: "string" }
