@@ -164,4 +164,20 @@ collections:
       - { label: "Image label (Parfume and flowers)", name: "alt", widget: "string" }
       - { label: "URL to TV archive", name: "link", widget: "string" }
       - { label: "Content", name: "body", widget: "hidden" }
-
+  - name: "hu-archive-episodes"
+    label: "HU-archive-episodes"
+    folder: "hu-archive-episodes"
+    create: true
+    slug: "{{slug}}"
+    fields: # The fields for each document, usually in front matter
+      - { label: "Template", name: "layout", widget: "hidden", default: "layouts/non-en-archive-episode.njk" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "huarchive" }
+      - { label: "Date", name: "date", widget: "hidden", default: "Created" }
+      - { label: "Title (10-20 characters)", name: "title", widget: "string" }
+      - { label: "Text (ČT Brno: Chocolateria in Moravia | MTVA Szeged: Clockmaker from Szeged | ...)", name: "perex", widget: "string" }
+      - { label: "Premiere date (25. 4. 2024)", name: "datum", widget: "string" }
+      - { label: "TV", name: "tv", widget: "hidden", default: "Duna TV" }
+      - { label: "Image 357x206 name (small-business_357x206.jpg)", name: "foto", widget: "string" }
+      - { label: "Image label (Parfume and flowers)", name: "alt", widget: "string" }
+      - { label: "URL to TV archive", name: "link", widget: "string" }
+      - { label: "Content", name: "body", widget: "hidden" }
