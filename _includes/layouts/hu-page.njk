@@ -7,7 +7,7 @@ language: hu
 
 <section class="hero" id="home">
 
-    {% for hero in collections.huhero | limit(1) %}
+    {% for hero in collections.huhero | reverse | limit(1) %}
 
     <div>
         <div class="hero__banner">

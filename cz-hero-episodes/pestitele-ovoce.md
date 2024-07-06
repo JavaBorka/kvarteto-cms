@@ -1,5 +1,6 @@
 ---
 layout: layouts/non-en-hero-episode.njk
+date: "2024-06-25"
 header: Poslední díl
 tv: ČT 2
 cta: Přehrát díl

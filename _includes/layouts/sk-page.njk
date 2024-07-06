@@ -7,7 +7,7 @@ language: sk
 
 <section class="hero" id="home">
 
-    {% for hero in collections.skhero | limit(1) %}
+    {% for hero in collections.skhero | reverse | limit(1) %}
 
     <div>
         <div class="hero__banner">

@@ -1,6 +1,7 @@
 ---
 layout: layouts/hero-episode.njk
 tags: hero
+date: "2024-06-25"
 title: RAW food growers
 datum: 25. 6. 2024
 foto1024: /images/uploads/boruvky_1024x768.jpg

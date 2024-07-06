@@ -1,6 +1,7 @@
 ---
 layout: layouts/non-en-hero-episode.njk
 header: Posledný diel
+date: "2024-06-25"
 tv: "Duna TV"
 cta: Prehrať diel
 logo: logo_DVOJKA_biele.svg

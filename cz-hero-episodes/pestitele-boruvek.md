@@ -2,7 +2,8 @@
 layout: layouts/non-en-hero-episode.njk
 tags: czhero
 title: Pěstitelé borůvek
-datum: 30. 7. 2024
+date: "2024-04-30"
+datum: 30. 4. 2024
 foto1024: boruvky_1024x768.jpg
 foto1440: boruvky_1440x825.jpg
 alt: Borůvky
