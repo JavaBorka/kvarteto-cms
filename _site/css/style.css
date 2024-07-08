@@ -559,6 +559,35 @@ body {
   }
 }
 
+.button-archive {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 35px 0;
+}
+.button-archive__link {
+  display: inline-block;
+  font-size: 15px;
+  margin-bottom: 5px;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #CD104D;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 1200px) {
+  .button-archive__link {
+    margin: 20px 0 0 0;
+    font-size: 18px;
+  }
+}
+.button-archive__link:hover {
+  background-color: rgb(178, 20, 70);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  color: #FFFFFF;
+}
+
 .partners__content {
   text-align: center;
 }
