@@ -38,6 +38,10 @@ collections:
       - { label: "Image label", name: "alt", widget: "string" }
       - { label: "URL to TV archive", name: "link", widget: "string" }
       - { label: "Content", name: "body", widget: "hidden" }
+      - { label: "Header", name: "header", widget: "hidden", default: "Latest episode" }
+      - { label: "TV", name: "tv", widget: "hidden", default: "RTVS :2" }
+      - { label: "Button", name: "cta", widget: "hidden", default: "Play episode" }
+      - { label: "Logo", name: "logo", widget: "hidden", default: "logo_DVOJKA_biele.svg" }
   - name: "cz-hero-episodes"
     label: "CZ-hero-episodes"
     folder: "cz-hero-episodes"
@@ -75,7 +79,7 @@ collections:
       - { label: "URL to TV archive", name: "link", widget: "string" }
       - { label: "Content", name: "body", widget: "hidden" }
       - { label: "Header", name: "header", widget: "hidden", default: "Posledný diel" }
-      - { label: "TV", name: "tv", widget: "hidden", default: "RTVS: 2" }
+      - { label: "TV", name: "tv", widget: "hidden", default: "RTVS :2" }
       - { label: "Button", name: "cta", widget: "hidden", default: "Prehrať diel" }
       - { label: "Logo", name: "logo", widget: "hidden", default: "logo_DVOJKA_biele.svg" }
   - name: "pl-hero-episodes"

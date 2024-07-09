@@ -2,6 +2,7 @@
 layout: layouts/archive-episode.njk
 title: Starodávná řemesla
 date: "2024-03-23"
+tv: "RTVS :2"
 link: https://www.rtvs.sk/televizia/archiv/14252/456124
 datum: 23. 3. 2024
 foto1024: business_1024x768.jpg
