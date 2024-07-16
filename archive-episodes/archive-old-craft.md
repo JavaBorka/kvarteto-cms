@@ -3,7 +3,6 @@ layout: layouts/archive-episode.njk
 title: Starodávná řemesla
 link: https://www.rtvs.sk/televizia/archiv/14252/456124
 tv: "RTVS :2"
-header: Latest episode
 datum: 23. 3. 2024
 foto: /images/uploads/business_357x206.jpg
 alt: Old craft main picture
