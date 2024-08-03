@@ -3,7 +3,7 @@ layout: layouts/non-en-hero-episode.njk
 tags: czhero
 date: Created
 title: aktivní senioři v2
-datum: 27.7.2024
+datum: 27. 7. 2024
 foto1024: active_seniors_1024x768
 foto1440: active_seniors_1440x825
 alt: obrázek fotografa
