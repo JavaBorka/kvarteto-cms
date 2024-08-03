@@ -53,8 +53,10 @@ collections:
       - { label: "Date", name: "date", widget: "hidden", default: "Created" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Premiere date", name: "datum", widget: "string" }
-      - { label: "Image 1024x768", name: "foto1024", widget: "string" }
-      - { label: "Image 1440x825", name: "foto1440", widget: "string" }
+      - { label: "Image 1024x768 upload", name: "foto1024upload", widget: "image", required: "false" }
+      - { label: "Image 1440x825 upload", name: "foto1440upload", widget: "image", required: "false" }
+      - { label: "Image 1024x768 name", name: "foto1024", widget: "string", required: "false" }
+      - { label: "Image 1440x825 name", name: "foto1440", widget: "string", required: "false" }
       - { label: "Image label", name: "alt", widget: "string" }
       - { label: "URL to TV archive", name: "link", widget: "string" }
       - { label: "Content", name: "body", widget: "hidden" }
