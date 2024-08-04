@@ -1,7 +1,7 @@
 ---
 layout: layouts/non-en-hero-episode.njk
 tags: czhero
-date: Created
+date: "2024-07-06"
 title: Firma na voňavky
 datum: 6. 7. 2024
 foto1024: business_1024x768.jpg
