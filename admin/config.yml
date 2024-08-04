@@ -50,7 +50,7 @@ collections:
     fields:
       - { label: "Template", name: "layout", widget: "hidden", default: "layouts/non-en-hero-episode.njk" }
       - { label: "Tags", name: "tags", widget: "hidden", default: "czhero" }
-      - { label: "Date 2024-03-24", name: "date", widget: "string" }
+      - { label: "Date", name: "date", widget: "hidden" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Premiere date", name: "datum", widget: "string" }
       - { label: "Image 1024x768 name", name: "foto1024", widget: "string", required: false }
